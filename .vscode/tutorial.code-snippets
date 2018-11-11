@@ -1,0 +1,48 @@
+{
+  "filters": {
+    "prefix": "filters",
+    "body": [
+      "const VisibilityFilters = {",
+      "  SHOW_ALL: 'All',",
+      "  SHOW_ACTIVE: 'Active',",
+      "  SHOW_COMPLETED: 'Completed'",
+      "};"
+    ]
+  },
+  "imports": {
+    "prefix": "imports",
+    "body": [
+      "import '@vaadin/vaadin-text-field';",
+      "import '@vaadin/vaadin-button';",
+      "import '@vaadin/vaadin-checkbox';",
+      "import '@vaadin/vaadin-radio-button/vaadin-radio-button';",
+      "import '@vaadin/vaadin-radio-button/vaadin-radio-group';"
+    ]
+  },
+  "styles": {
+    "prefix": "styles",
+    "body": [
+      "<style>",
+      "  :host {",
+      "    display: block;",
+      "    max-width: 800px;",
+      "    margin: 0 auto;",
+      "  }",
+      "  .input-layout {",
+      "    width: 100%;",
+      "    display: flex;",
+      "  }",
+      "  .input-layout vaadin-text-field {",
+      "    flex: 1;",
+      "    margin-right: var(--spacing);",
+      "  }",
+      "  .todos-list {",
+      "    margin-top: var(--spacing);",
+      "  }",
+      "  .visibility-filters {",
+      "    margin-top: calc(4 * var(--spacing));",
+      "  }",
+      "</style>"
+    ]
+  }
+}
