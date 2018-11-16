@@ -30,26 +30,31 @@ class TodoView extends LitElement {
   render() {
     return html`
       <style>
-        :host {
+        todo-view {
           display: block;
           max-width: 800px;
           margin: 0 auto;
         }
-        .input-layout {
+
+        todo-view .input-layout {
           width: 100%;
           display: flex;
         }
-        .input-layout vaadin-text-field {
+
+        todo-view .input-layout vaadin-text-field {
           flex: 1;
           margin-right: var(--spacing);
         }
-        .todos-list {
+
+        todo-view .todos-list {
           margin-top: var(--spacing);
         }
-        .visibility-filters {
+
+        todo-view .visibility-filters {
           margin-top: calc(4 * var(--spacing));
         }
       </style>
+
       <div class="input-layout" @keyup="${this.shortcutListener}">
         <vaadin-text-field
           placeholder="Task"
@@ -148,6 +153,10 @@ class TodoView extends LitElement {
       default:
         return todos;
     }
+  }
+
+  createRenderRoot() {
+    return this;
   }
 }
 
